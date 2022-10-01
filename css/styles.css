@@ -69,11 +69,16 @@ height: auto;}
     justify-content: space-between;
 }
 
+.foot-contacts{
+    margin-right: 70px;
+}
+
 .footer{
     
 
     display: flex;
-    gap: 70px;
+    /* gap: 70px; */
+    align-items: baseline;
 }
 
 .section{
@@ -258,6 +263,8 @@ height: auto;}
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),    
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     padding-bottom: 30px;
 }
@@ -382,7 +389,7 @@ height: auto;}
 }
 
 .links-icon{
-    fill: var(--second-black-color);
+    fill: var(--clients);
 }
 
 /**
@@ -402,7 +409,15 @@ height: auto;}
 .links-icon{
     fill: currentColor;
 } */
+.clients-link{
+    height: 92px;
+    border: 1px solid var(--clients);
+    border-radius: 3px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .clients-title {
     font-weight: 700;
@@ -422,24 +437,19 @@ height: auto;}
 }
 
 .clients-rectangle{
-    width: 170px;
-    height: 92px;
-    border: 1px solid var(--clients);
-    border-radius: 3px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* width: 170px; */
+    flex-basis: calc((100% - 150px) / 6);
+    
 }
 
-.clients-rectangle:hover,
-.clients-rectangle:focus    {
+.clients-link:hover,
+.clients-link:focus    {
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
 
-.clients-rectangle:hover .links-icon, .clients-rectangle:focus .links-icon{
+.clients-link:hover .links-icon, .clients-link:focus .links-icon{
     fill: var(--accent-color);
 }
 
@@ -542,7 +552,7 @@ address{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    
+    text-transform: uppercase;
 }
 
 
@@ -621,30 +631,28 @@ address{
 
 .port-cards{
     background-color: var(--white-text-color);
-    flex-basis: calc(100% / 3 - 30px );
+    flex-basis: calc((100% - 60px)/3);
 }
 
-.port-cards:hover{
+.port-link{
+    display: inline-block;
+}
+
+.port-link:hover{
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06),
     0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
+.card-border{
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
 
 .title-cards{    
-    padding: 20px 0px 0px 24px;
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
     margin-bottom: 4px;
-
 }
 
-.subtitle-cards{
-    padding: 0 24px 20px 24px;
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-}
 
 
 
@@ -653,7 +661,7 @@ address{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em
+    letter-spacing: 0.06em;
 
 }
 
